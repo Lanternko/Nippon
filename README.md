@@ -11,9 +11,13 @@ Author: LanternKo
 
 # Item Color Explained
 Unique: Brown > Bright Orange
+
 Rare: Beige > Yellow > Orange Frame > White Based Orange
+
 Magic: Blue
+
 Normal: White
+
 Identified: Purple
 
 Rare Jewellry: Purple
