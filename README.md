@@ -15,10 +15,9 @@ Author: LanternKo
 + Magic: Blue
 + Normal: White
 + Identified: Purple
-
+### 
 + Rare Jewellry: Purple
 + Other Jewellry: Tiffany Green
-
 + Rare Jewel: Yellow Base
 + Other Jewel: Blue Base
 
