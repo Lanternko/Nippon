@@ -13,6 +13,7 @@ Author: LanternKo
 1. Normal: for beginners who are in early maps(under T13 or under level 85)
 2. Strict: for advances who can consistenly clear Red Maps
 3. Uber: for top players who are clearing juiced-breach or rich. (hides alot of thing including bad rares)
+   
 # Item Color Explained
 + Unique: Brown > Bright Orange
 + Rare: Beige > Yellow > Orange Frame > White Based Orange
@@ -25,7 +26,3 @@ Author: LanternKo
 + Rare Jewel: Yellow Base
 + Other Jewel: Blue Base
 
-# Currency Color Explained
-+ T0: White Based Red
-+ T1: Orange
-+ T2~T4: Red > Pink
