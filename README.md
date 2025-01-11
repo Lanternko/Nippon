@@ -2,7 +2,7 @@
 Uses traditional Japanese colors to create a chill, zen-like vibe for mapping. 
 Focusing on clarity and minimal distraction.
 
-Follow My Filer on POE official website for auto-updating!
+Follow My Filter on POE official website for auto-updating!
 https://www.pathofexile.com/account/view-profile/kojiek7-3653/item-filters
 
 ## Normal version
