@@ -1,28 +1,24 @@
-# Nippon
-Filter based on Nippon Traditional color, which creates a peaceful-zen vibe when mapping
+# The Nippon Filter Series
+Uses traditional Japanese colors to create a chill, zen-like vibe for mapping. 
+Focusing on clarity and minimal distraction.
 
-Author: LanternKo
+## Normal version
+Ideal for beginners(campaign or low tier maps), Nippon Normal offers a straightforward and detailed information of valued items.
 
-# Main FEATURES
-1. No background color for Golds. Since we don't need to hand-click them, no reasons to highlight.
-2. Zen vibe color.
-3. Detailed categorized for item tiers. Different value base will has a gradual color.
-4. Hide or lower the existence for ITEMS you don't want to PICK.
+### Key Features
+- Show Most items but with detailed layer of colors representing the value of items.
+- Hides low-value normal/magic items; maps 5 levels lower than your area; under than 70 gold.
 
-# About Filter Choosing
-1. Normal: for beginners who are in early maps(under T13 or under level 85)
-2. Strict: for advances who can consistenly clear Red Maps
-3. Uber: for top players who are clearing juiced-breach or rich. (hides alot of thing including bad rares)
-   
-# Item Color Explained
-+ Unique: Brown > Bright Orange
-+ Rare: Beige > Yellow > Orange Frame > White Based Orange
-+ Magic: Blue
-+ Normal: White
-+ Identified: Purple
-### 
-+ Rare Jewellry: Purple
-+ Other Jewellry: Tiffany Green
-+ Rare Jewel: Yellow Base
-+ Other Jewel: Blue Base
+## Srict version
+Perfect for efficient red map farming, this version balances clarity and efficiency by hiding most low-value items while keeping essential drops visible.
 
+### Key Features
+- Hides T10 maps, under 200 gold, most rares, and orb of transmute.
+- Features a Matcha-green theme for currency, lets have a chill afternoon drinking Matcha Latte, mate!
+
+## Uber version
+Designed for high-end players, Nippon Uber focuses on only the most valuable drops, ensuring a distraction-free and efficient farming experience.
+
+### Key Features
+- Hides T12 maps, most equipment, leaving only the best weapons and ES/Evasion gear.
+- Minimalist! Lowers brightness for low-value items to reduce screen clutter.
