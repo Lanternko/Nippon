@@ -1795,20 +1795,26 @@ class FilterViewer(QMainWindow):
 
                 # Extract name based on rules
                 item_text = "Unknown Item"  # Default fallback
-                # Check for BaseType first
-                basetype_match = re.search(r'BaseType\s*(?:==)?\s*("[^"]+")', block)
-                if basetype_match:
-                    item_text = basetype_match.group(1).strip('"')
+
+                # Check for comment after "Show" or "Hide"
+                comment_match = re.search(r'(?:Show|Hide)\s+#\s*(.+)', block)
+                if comment_match:
+                    item_text = comment_match.group(1).strip()
                 else:
-                    # Check for Class if BaseType is not found
-                    class_match = re.search(r'Class\s*(?:==)?\s*("[^"]+")', block)
-                    if class_match:
-                        item_text = class_match.group(1).strip('"')
+                    # Check for BaseType
+                    basetype_match = re.search(r'BaseType\s*(?:==)?\s*("[^"]+")', block)
+                    if basetype_match:
+                        item_text = basetype_match.group(1).strip('"')
                     else:
-                        # Check for Rarity if neither BaseType nor Class is found
-                        rarity_match = re.search(r'Rarity\s+(\w+)', block)
-                        if rarity_match:
-                            item_text = rarity_match.group(1)
+                        # Check for Class if BaseType is not found
+                        class_match = re.search(r'Class\s*(?:==)?\s*("[^"]+")', block)
+                        if class_match:
+                            item_text = class_match.group(1).strip('"')
+                        else:
+                            # Check for Rarity if neither BaseType nor Class is found
+                            rarity_match = re.search(r'Rarity\s+(\w+)', block)
+                            if rarity_match:
+                                item_text = rarity_match.group(1)
 
                 # Display the extracted name
                 preview_item = QLabel(item_text)
@@ -1844,6 +1850,7 @@ class FilterViewer(QMainWindow):
             error_label = QLabel(f"Error parsing filter: {str(e)}")
             error_label.setStyleSheet("color: red;")
             self.preview_layout.addWidget(error_label)
+
 
 
 

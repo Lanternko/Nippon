@@ -1,36 +1,27 @@
 #===============================================================================================================
-# 80等後使用過濾器！
+# Nippon Normal
 #===============================================================================================================
-# VERSION:  1/6
-# AUTHOR:   路燈大師/修改自 惡魔貓【https://www.youtube.com/@devilcatwith2cats】
+# AUTHOR: Lantern Ko
 
-# T6以下地圖時，會顯示大部分東西！進到黃圖後，低價物會隱藏
+# When in T6 maps or below, shows most items! After entering yellow maps, low value items will be hidden
 
-# 隱藏：蛻變石以下、T6以下地圖、17級以下技能寶石、200以下金幣
-# 降低亮度：爛黃裝、T10以下地圖
-# 醒目提示：好基底、飾品、譫妄碎片、20級技能寶石
+# Hide: Below transmute, T6 maps and below, skill gems below level 17, gold below 200
+# Reduced brightness: Bad rares, T10 maps and below
+# Highlighted: Good bases, jewelry, delirium splinters, level 20 skill gems
 
-
-# 好基底 = siphoning wand, attuned wand, expert crossbows, expert dualstring crossbow, ES、閃避防裝
-# 飾品 = rings, belts, amulets
-
-# 通貨：白色 > 橘色 > 紅色 > 粉紅色
-# 金裝：橘色 > 灰黃色
-# 傳奇：亮橘 > 淺咖啡
-
-
+# Good Bases = siphoning wand, attuned wand, expert crossbows, expert dualstring crossbow, ES, Evasion Armour 
 
 #=============================================================
-## 目錄
-## 900 Override:傳奇、機會石基底、高階塗油、預兆、王戰鑰匙
-## 800 金幣
-## 700 寶石、護符、符文
-## 600 已鑒定 ## 610 高物等裝備 ## 620 飾品 ## 630 武器 ## 640 防裝 ## 650 藍白
+## Catalogue
+## 900 Override:Unique, Chance Base, Expensive Item
+## 800 Gold
+## 700 Gem, Charm, Rune
+## 600 Identified ## 610 81+ ## 620 Jewellry ## 630 Weapon ## 640 Armour ## 650 Normal/Magic
 
-## 500 靈魂核心、珠寶、聖所遺物
-## 400 通貨
-## 300 碎片、地圖
-## 000 其他
+## 500 Soul Core, Jewel, Relic
+## 400 Currency
+## 300 Fragment, Waystone
+## 000 Other
 #=============================================================
 
 #==================================
@@ -769,13 +760,6 @@ Show
         MinimapIcon 1 Pink Circle
         SetFontSize 40
 
-Hide
-    Class "Currency"
-    BaseType "Catalyst"
-    AreaLevel >= 65
-        SetTextColor 33 30 85           # 紺桔梗（深紫）
-        SetBackgroundColor 180 129 187  # 紅藤（藍莓起司）
-        SetFontSize 40
 
 #------------------------------
 ## T6地圖以上時，隱藏捲軸、蛻變石

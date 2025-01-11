@@ -46,13 +46,13 @@ Show # 普通傳奇
 ### 讓你點機會石！！！
 #-----------------------
 
-# Head Hunter, Ryslatha's Coil, Dream Fragments, Astramentis(StruggleScream), Death Rush(Thief's Torment), Eye of Chayula & Serpent's Egg, Queen of the Forest
-# The surrender, Ingenuity, The Everlasting Gaze 這些不確定能不能機會石
+# Head Hunter,  Dream Fragments, Astramentis(StruggleScream), Death Rush(Thief's Torment), Eye of Chayula & Serpent's Egg, Queen of the Forest
+
 Hide 
     AreaLevel >= 65
     BaseType "Advanced Stone Tower Shield" "Expert Stone Tower Shield"
 Show # 機會石基底
-    BaseType "Heavy Belt" "Ornate Belt" "Sapphire Ring" "Stellar Amulet" "Emerald Ring" "Gold Amulet" "Azure Amulet" "Smuggler Coat" "Stone Tower Shield"
+    BaseType "Heavy Belt" "Sapphire Ring" "Stellar Amulet" "Emerald Ring" "Gold Amulet" "Azure Amulet" "Smuggler Coat" "Stone Tower Shield"
         Rarity Normal
     SetFontSize 45
     SetTextColor 219 77 109 255
@@ -202,7 +202,7 @@ Hide
 ## 600 identified
 #=======================
 Show # 已鑒定物品
-Class "Quarterstaves" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "focus" "Quiver" "Crossbow" "Wand" "Bow"
+Class "Quarterstaves" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "focus" "Quiver" "Crossbow" "Wand" "Bow" "Ring" "Belt" "Amulet"
     Identified True
         SetTextColor 143 119 181 255
         SetBorderColor 143 119 181 255
@@ -227,7 +227,7 @@ Show # 82 白鞋
 Show # 81 白雙弦弓
     ItemLevel >= 81
     Rarity Normal
-    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Omen Sceptre" "Rattling Sceptre" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Expert Altar Robe" "Expert Keth Raiment" "Expert Intricate Gloves" "Expert Waxed Jacket"
+    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Omen Sceptre" "Rattling Sceptre" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Expert Altar Robe" "Expert Keth Raiment" "Expert Intricate Gloves" "Expert Waxed Jacket"
         SetTextColor 11 11 11 255
         SetBorderColor 11 11 11 255
         SetBackgroundColor 222 222 222 137
@@ -246,7 +246,7 @@ Show # 82 藍鞋
 Show # 81 藍雙弦弓
     ItemLevel >= 81
     Rarity Magic 
-    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Omen Sceptre" "Rattling Sceptre" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Expert Altar Robe" "Expert Keth Raiment" "Expert Intricate Gloves" "Expert Waxed Jacket"
+    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Omen Sceptre" "Rattling Sceptre" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Expert Altar Robe" "Expert Keth Raiment" "Expert Intricate Gloves" "Expert Waxed Jacket"
         SetTextColor 11 52 110 255
         SetBorderColor 11 52 110 255
         SetBackgroundColor 222 222 222 237
@@ -265,7 +265,7 @@ Show # 82 金鞋
 # 十字弓、雙弦弓、法杖、權杖、細杖、ES衣服&手套、鞋子全部
 Show # 81 金雙弦弓
     ItemLevel >= 81
-    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Omen Sceptre" "Rattling Sceptre" "Expert Crescent Quarterstaff" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Expert Altar Robe" "Expert Keth Raiment" "Expert Intricate Gloves" "Expert Waxed Jacket"
+    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Omen Sceptre" "Rattling Sceptre" "Expert Crescent Quarterstaff" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Expert Altar Robe" "Expert Keth Raiment" "Expert Intricate Gloves" "Expert Waxed Jacket"
         SetFontSize 40
         SetTextColor 199 128 45 255
         SetBorderColor 199 128 45 255
@@ -294,10 +294,12 @@ Show # 裂痕戒指
     Class "Rings"
     Rarity Normal Magic
     BaseType  "Breach Ring"
-        SetTextColor 223 216 241 220
-        SetBorderColor 155 144 194 220
-        SetBackgroundColor 20 20 38 220
+        SetTextColor 193 167 255 255
+        SetBorderColor 193 167 255 255
+        SetBackgroundColor 0 0 0 255
     SetFontSize 40
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
 
 #--------------------------
 # 戒指 護身符 腰帶 ring belt amulet
@@ -341,7 +343,7 @@ BaseType "Expert Crescent Quarterstaff" "Expert Long Quarterstaff" "Expert Slici
 Show # 專家十字弓
 Class "Crossbows"
 Rarity Rare
-BaseType "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Sturdy Crossbow" "Expert Forlorn Crossbow" "Expert Varnished Crossbow" "Expert Tense Crossbow"
+BaseType "Expert Bombard Crossbow" "Expert Sturdy Crossbow" "Expert Forlorn Crossbow" "Expert Varnished Crossbow" "Expert Tense Crossbow"
         SetFontSize 40
         SetTextColor 239 187 36 255
         SetBorderColor 239 187 36 255
@@ -509,16 +511,16 @@ Show
 # 十字弓、雙弦弓、法杖
 Show # 專家雙弦弓
 Rarity Magic
-    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Expert Crescent Quarterstaff" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff"
+    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Expert Crescent Quarterstaff" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff"
         SetFontSize 35 
-        SetBackgroundColor 19 19 19 230
-        SetTextColor 0 92 175 230
+        SetBackgroundColor 19 19 19 250
+        SetTextColor 81 168 221 
         SetBorderColor 0 0 0 0
 
 # 十字弓、雙弦弓、法杖
 Show # 專家雙弦弓
 Rarity Normal
-    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Expert Crescent Quarterstaff" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff"
+    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Expert Crescent Quarterstaff" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff"
         SetFontSize 35 
         SetBackgroundColor 38 38 38 230
         SetTextColor 233 233 233 210
@@ -604,8 +606,8 @@ Show # 神聖石
     Class "Currency"
     BaseType "Mirror" "Divine" "Perfect Jeweller's Orb" "Greater Jeweller's Orb" "Orb of Chance"
         SetFontSize 45
-        SetTextColor 0 94 21 255
-        SetBorderColor 0 94 21 255
+        SetTextColor 255 0 0 255
+        SetBorderColor 255 0 0 255
         SetBackgroundColor 255 255 255 255
             PlayAlertSound 6 300
             PlayEffect Red
@@ -842,7 +844,7 @@ Show # 戒指、項鏈
     Class "Rings" "Amulets" "Belt"
     Rarity Magic Normal
         SetFontSize 35
-        SetTextColor 120 194 196 230
+        SetTextColor 155 190 202 230
         SetBorderColor 0 0 0 200
 
 #-----------------------------------
@@ -897,9 +899,9 @@ Hide # 普通物品
     Rarity Normal
     Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "focus" 
         SetFontSize 35 
-        SetBorderColor 0 0 0 200
-    SetTextColor 255 255 255 255
-    SetBackgroundColor 0 0 0 255
+        SetBackgroundColor 38 38 38 230
+        SetTextColor 233 233 233 210
+        SetBorderColor 0 0 0 0
 Hide # 魔法物品
     AreaLevel >= 65
     Rarity  Magic

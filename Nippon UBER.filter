@@ -1,125 +1,101 @@
-#===============================================================================================================
-# 終局90等後使用過濾器！
-#===============================================================================================================
-# VERSION:  1/6
-# AUTHOR:   摳捷 / 參考自惡魔貓【https://www.youtube.com/@devilcatwith2cats】
-# 當你可以穩定打T15 瓦詞圖再使用這個！
-
-# 隱藏：蛻變石以下、T10以下地圖、18級以下技能寶石、200以下金幣
-# 降低亮度：爛黃裝、T13以下地圖
-# 醒目提示：好基底、機會石基底、20級技能寶石、崇高、神聖
-
-# 好基底 = siphoning wand, attuned wand, expert crossbows, expert dualstring crossbow, ES、閃避防裝
-# 飾品 = rings, belts, amulets
-
-# 通貨：白色 > 橘色 > 紅色 > 粉紅色
-# 金裝：橘色 > 灰黃色
-# 傳奇：亮橘 > 淺咖啡
-# 金幣：金色 > 淺黃
-
-# 越上面的詞條，優先度越高
-# 想要鑒定所有金裝的人，請將最後一行隱藏
-
-# 12/28
-# 大改裝備顏色，降低大部分的亮度
-# 將已鑒定的裝備改成灰褐色
+#============================================================================================================
+# Nippon Uber
+# AUTHOR:   Lantern Ko
+# Good Bases = siphoning wand, attuned wand, expert crossbows, expert dualstring crossbow, ES、Evasion Armour
+#============================================================================================================
 
 
 #=============================================================
-## 目錄
-## 900 Override:傳奇、機會石基底、高階塗油、預兆、王戰鑰匙
-## 800 金幣
-## 700 寶石、護符、符文
-## 600 已鑒定 ## 610 高物等裝備 ## 620 飾品 ## 630 武器 ## 640 防裝 ## 650 藍白
+## Catalogue
+## 900 Override:Unique, Chance Base, Expensive Item
+## 800 Gold
+## 700 Gem, Charm, Rune
+## 600 Identified ## 610 81+ ## 620 Jewellry ## 630 Weapon ## 640 Armour ## 650 Normal/Magic
 
-## 500 靈魂核心、珠寶、聖所遺物
-## 400 通貨
-## 300 碎片、地圖
-## 000 其他
+## 500 Soul Core, Jewel, Relic
+## 400 Currency
+## 3001 Fragment, Waystone
+## 000 Other
 #=============================================================
 
-#==================================
-### 900 Overrides - Uniques, Valuables
-#==================================
+## 1.0.1 now show t13 maps, and highlight unique gold rings
 
-#-------------------------------
-## 高價傳奇！！！
-#-------------------------------
-
-Show
-    BaseType "Heavy Belt" "Shrine Sceptre" "Grand Regalia" "Armoured Cap" "Furtive Wraps" "Utility Belt" "Ornate Belt" "Emerald Ring" "Stone Tower" "Flask" "Crucible Tower" "Burnished Gauntlets" "Conqueror Plate" "Fine Bracers" "Gold Amulet" "Flask" "Grand Regalia" "Armoured Cap"
+#====================================================
+## 900 Override:Unique, Chance Base, Expensive Item
+#====================================================
+Show # Ingenuity
+    BaseType "Heavy Belt" "Shrine Sceptre" "Grand Regalia" "Armoured Cap" "Furtive Wraps" "Utility Belt" "Ornate Belt" "Emerald Ring" "Stone Tower" "Flask" "Crucible Tower" "Burnished Gauntlets" "Conqueror Plate" "Fine Bracers" "Gold Amulet" "Flask" "Grand Regalia" "Armoured Cap" 
     Rarity Unique
         SetFontSize 45
-        SetTextColor 255 255 255            # 白色
-        SetBorderColor 255 255 255          # 白色
-        SetBackgroundColor 247 92 47        # 紅緋
+        SetTextColor 255 0 0 255
+        SetBorderColor 255 0 0 255
+        SetBackgroundColor 255 255 255 255
             PlayAlertSound 6 300
             PlayEffect Red
             MinimapIcon 0 Red Star
-
-Show
-    BaseType "Crude Bow" "Long Quarterstaff" "Wrapped Greathelm" "Spiked Club"
+Show # Pillar of Gods
+    BaseType "Crude Bow" "Long Quarterstaff" "Wrapped Greathelm" "Spiked Club" "Gold Ring"
     Rarity Unique
         SetFontSize 45
-        SetTextColor 0 0 0                  # 黑色
-        SetBorderColor 0 0 0
-        SetBackgroundColor 175 96 37        # 柑橘
-            PlayAlertSound 12 300
+        SetTextColor 255 255 255 255
+        SetBorderColor 255 255 255 255
+        SetBackgroundColor 247 92 47 255
+            PlayAlertSound 9 300
             PlayEffect Blue
             MinimapIcon 0 Blue Star
-
-Show
+Show # Against the Darkness
     Rarity Unique
     Class "Jewel"
-        SetFontSize 45
-        SetTextColor 255 255 255            # 黑色
-        SetBorderColor 255 255 255          # 黑色
-        SetBackgroundColor 247 92 47        # 紅緋
-            PlayAlertSound 12 300
-            PlayEffect Blue
-            MinimapIcon 0 Blue Star
+    SetFontSize 45
+        SetTextColor 255 255 255 255
+        SetBorderColor 255 255 255 255
+        SetBackgroundColor 247 92 47 255
+            PlayAlertSound 6 300
+            PlayEffect Red
+            MinimapIcon 0 Red Star
 
 
 #----------
 ## 普通傳奇
 #----------
-Show
+Show # Unique
     Rarity Unique
-    SetTextColor 0 0 0            
-    SetBorderColor 0 0 0           
-    SetBackgroundColor 115 67 56
+        SetTextColor 0 0 0 255
+        SetBorderColor 0 0 0 255
+        SetBackgroundColor 175 96 37 255
         PlayAlertSound 3 300
         PlayEffect Brown
         MinimapIcon 2 Brown Star
-        SetFontSize 32
+        SetFontSize 35
 
 #-----------------------
 ### 讓你點機會石！！！
 #-----------------------
 
-# Head Hunter, Ryslatha's Coil, Dream Fragments, Astramentis(StruggleScream), Death Rush(Thief's Torment), Eye of Chayula & Serpent's Egg, Queen of the Forest
-# The surrender, Ingenuity, The Everlasting Gaze 這些不確定能不能機會石
+# Head Hunter,  Dream Fragments, Astramentis(StruggleScream), Death Rush(Thief's Torment), Eye of Chayula & Serpent's Egg, Queen of the Forest
 Hide 
+    AreaLevel >= 65
     BaseType "Advanced Stone Tower Shield" "Expert Stone Tower Shield"
-Show
-    BaseType "Heavy Belt" "Ornate Belt" "Sapphire Ring" "Stellar Amulet" "Emerald Ring" "Gold Amulet" "Azure Amulet" "Smuggler Coat" "Stone Tower Shield"
+Show # Chance Bases
+    BaseType "Heavy Belt" "Sapphire Ring" "Stellar Amulet" "Emerald Ring" "Gold Amulet" "Azure Amulet" "Smuggler Coat" "Stone Tower Shield"
         Rarity Normal
     SetFontSize 45
-    SetTextColor 219 77 109         # 中紅（桃紅）
-    SetBorderColor 219 77 109
+    SetTextColor 219 77 109 255
+    SetBorderColor 219 77 109 255
         PlayEffect Yellow
         MinimapIcon 1 Yellow Diamond
+        SetBackgroundColor 0 0 0 255
 
 #---------------
 ## 高階精髓
 #---------------
-Show
+Show # Greater Essence
     Class "Currency"
     BaseType "Greater"
     SetFontSize 45
-    SetTextColor 129 87 234         # 高雅紫
-    SetBorderColor 129 87 234       # 高雅紫
-    SetBackgroundColor 255 255 255  # 白色
+    SetTextColor 129 87 234 255
+    SetBorderColor 129 87 234 255
+    SetBackgroundColor 255 255 255 255
         PlayAlertSound 6 300
         PlayEffect Red
         MinimapIcon 0 Purple Cross
@@ -127,13 +103,13 @@ Show
 #---------------
 ## 高階塗油
 #---------------
-Show
+Show # T1 Distilled
     Class "Currency"
     BaseType "Distilled Despair" "Distilled Fear" "Distilled Suffering" "Distilled Isolation" 
     SetFontSize 45
-    SetTextColor 129 87 234         # 高雅紫
-    SetBorderColor 129 87 234       # 高雅紫
-    SetBackgroundColor 255 255 255  # 白色
+    SetTextColor 129 87 234 255
+    SetBorderColor 129 87 234 255
+    SetBackgroundColor 255 255 255 255
         PlayAlertSound 6 300
         PlayEffect Red
         MinimapIcon 0 Purple Cross
@@ -141,19 +117,19 @@ Show
 #---------------
 ## 終局王鑰匙碎片
 #---------------
-Show
+Show # Endgame Boss Fragment
     Class "Pinnacle Keys"
     SetFontSize 45
-    SetTextColor 234 87 223         # 亮粉紅
-    SetBorderColor 234 87 223       # 亮粉紅
-    SetBackgroundColor 255 255 255  # 白色
+    SetTextColor 234 87 223 255
+    SetBorderColor 234 87 223 255
+    SetBackgroundColor 255 255 255 255
         PlayAlertSound 6 300
         PlayEffect Red
 
 #--------------------------
 ## 預兆 omen
 #--------------------------
-Show
+Show # T1 Omen
 BaseType  "Omen of Whittling" "Omen of Corruption" "Omen of Sinistral Annulment" "Omen of Dextral Annulment"
     SetTextColor 255 0 0 255
     SetBorderColor 255 0 0 255
@@ -162,12 +138,11 @@ BaseType  "Omen of Whittling" "Omen of Corruption" "Omen of Sinistral Annulment"
         PlayEffect Red
         MinimapIcon 0 Red Star
     SetFontSize 45
-
-Show
+Show # T2 Omen
 BaseType "Omen of Resurgence" "Omen of Amelioration"
     SetTextColor 255 255 255 255
     SetBorderColor 255 255 255 255
-    SetBackgroundColor 240 90 35
+    SetBackgroundColor 240 90 35 255
         PlayAlertSound 1 300
         PlayEffect White
         MinimapIcon 1 White Circle
@@ -177,8 +152,7 @@ BaseType "Omen of Resurgence" "Omen of Amelioration"
 #==========================
 # 800 Gold Money
 #==========================
-
-Show
+Show    # 2500 Gold
 StackSize > 1999
 BaseType == "Gold"
     SetTextColor 247 194 66         # 花葉（飽和黃）
@@ -186,21 +160,20 @@ BaseType == "Gold"
     PlayEffect Orange Temp
     PlayAlertSound 3 100
     MinimapIcon 0 Yellow Raindrop
-
-Show
+Show # 850 Gold
 StackSize > 799
 BaseType == "Gold"
-    SetTextColor 250 214 137 210    # 淺黃
+    SetTextColor 250 231 23 210
     SetBackgroundColor 55 52 40 5
     MinimapIcon 0 White Raindrop
-
-Show
+    SetBorderColor 0 0 0 0
+Show    # 250 Gold
 StackSize >= 200
 BaseType == "Gold"
     SetTextColor 250 214 137 160    # 淺黃
     SetBackgroundColor 55 52 40 5
-
-Hide
+Hide    # 50 Gold
+    AreaLevel >= 65
     StackSize <= 199
     BaseType == "Gold"
         SetTextColor 250 214 137 160    # 淺黃
@@ -211,117 +184,118 @@ Hide
 # 700 Uncut Gems Charm
 #==========================
 # 20級技能寶石！！！
-Show
+Show # LV 20 Skill Gem
     BaseType "Uncut"
     ItemLevel >= 20
     SetFontSize 45
-    SetTextColor 234 87 223         # 亮粉紅
-    SetBorderColor 234 87 223       # 亮粉紅
-    SetBackgroundColor 255 255 255  # 白色
+    SetTextColor 234 87 223 255
+    SetBorderColor 234 87 223 255
+    SetBackgroundColor 255 255 255 255
         PlayAlertSound 6 300
         PlayEffect Red
         MinimapIcon 0 Red UpsideDownHouse
-
-Show
+Show # LV 19 Skill Gem
     BaseType "Uncut"
     ItemLevel >= 19
     SetFontSize 45
-    SetTextColor 145 173 112        # 柳染（翠綠）
-    SetBorderColor 145 173 112
+    SetTextColor 145 173 112 255
+    SetBorderColor 145 173 112 255
+    SetBackgroundColor 0 0 0 255
     PlayAlertSound 2 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan UpsideDownHouse
     
 ## 隱藏18級技能寶石
 Hide 
-    BaseType "Uncut"
     AreaLevel >= 65
+    BaseType "Uncut"
 
 #-------------
 # charm rune
 #-------------
-
-Hide
+Hide # Iron Rune
+    AreaLevel >= 65
     BaseType "Iron Rune" "Golden Charm"   
-    SetTextColor 0 137 108      # 青竹（Tiffany綠）
-    PlayEffect Cyan Temp
-
+    SetTextColor 0 137 108 255
+    SetBorderColor 0 137 108 255
+    PlayEffect Cyan
+    SetBackgroundColor 0 0 0 255
 Hide 
+    AreaLevel >= 65
     BaseType " Rune" " Charm"
 
 
 #=======================
 ## 600 identified
 #=======================
-Show
-Class "Quarterstaves" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "focus" "Quiver" "Crossbow" "Wand" "Bow"
+Show # Identified Item
+Class "Quarterstaves" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "focus" "Quiver" "Crossbow" "Wand" "Bow" "Ring" "Belt" "Amulet"
     Identified True
-        SetTextColor 143 119 181            # 紫色
-        SetBorderColor 143 119 181          # 紫色
-        SetBackgroundColor 20 20 38 250     # 淺黑色
-            MinimapIcon -1
+        SetTextColor 143 119 181 255
+        SetBorderColor 143 119 181 255
+        SetBackgroundColor 20 20 38 250
             SetFontSize 32
+
 
 #=====================================
 ## 610 高物等裝備!!! ilv 81+ high level
 #=====================================
 # 白鞋子
-Show
+Show # 82 Boots
     ItemLevel >= 82
     Class "Boots"
     Rarity Normal
-        SetTextColor 11 11 11
-        SetBorderColor 11 11 11
-        SetBackgroundColor 222 222 222 137      # 透明OFFWHITE
+        SetTextColor 11 11 11 255
+        SetBorderColor 11 11 11 255
+        SetBackgroundColor 222 222 222 137
         SetFontSize 40
 # 白裝備       
-Show
+Show # 81 Expert DualString Bow
     ItemLevel >= 81
     Rarity Normal
-    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Omen Sceptre" "Rattling Sceptre" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Expert Altar Robe" "Expert Keth Raiment" "Expert Intricate Gloves" "Expert Waxed Jacket"
-        SetTextColor 11 11 11
-        SetBorderColor 11 11 11
-        SetBackgroundColor 222 222 222 137      # 透明OFFWHITE
+    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Omen Sceptre" "Rattling Sceptre" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Expert Altar Robe" "Expert Keth Raiment" "Expert Intricate Gloves" "Expert Waxed Jacket"
+        SetTextColor 11 11 11 255
+        SetBorderColor 11 11 11 255
+        SetBackgroundColor 222 222 222 137
         SetFontSize 40
 
 # 藍鞋子
-Show
+Show # 82 Boots
     ItemLevel >= 82
     Class "Boots"
     Rarity Magic
-        SetTextColor 11 52 110                  # 琉璃紺
-        SetBorderColor 11 52 110                # 琉璃紺
-        SetBackgroundColor 222 222 222 237      # OFFWHITE
+        SetTextColor 0 109 186 255
+        SetBorderColor 0 109 186 255
+        SetBackgroundColor 0 0 0 255
         SetFontSize 40
 # 藍裝備       
-Show
+Show # 81 Expert Dualstring Bow
     ItemLevel >= 81
     Rarity Magic 
-    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Omen Sceptre" "Rattling Sceptre" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Expert Altar Robe" "Expert Keth Raiment" "Expert Intricate Gloves" "Expert Waxed Jacket"
-        SetTextColor 11 52 110                  # 琉璃紺
-        SetBorderColor 11 52 110                # 琉璃紺
-        SetBackgroundColor 222 222 222 237      # OFFWHITE
+    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Omen Sceptre" "Rattling Sceptre" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Expert Altar Robe" "Expert Keth Raiment" "Expert Intricate Gloves" "Expert Waxed Jacket"
+        SetTextColor 0 109 186 255
+        SetBorderColor 0 109 186 255
+        SetBackgroundColor 0 0 0 255
         SetFontSize 40
 
 # 金鞋子
-Show
+Show # 82 Boots
     ItemLevel >= 82
     Class "Boots"
         SetFontSize 40
-        SetTextColor   199 128 45   # 金茶
-        SetBorderColor 199 128 45   # 金茶
-        SetBackgroundColor 233 233 233 233      # OFFWHITE
+        SetTextColor 239 187 36 255
+        SetBorderColor 239 187 36 255
+        SetBackgroundColor 0 0 0 255
             PlayEffect Orange
             MinimapIcon 0 Red Diamond
-            
 # 十字弓、雙弦弓、法杖、權杖、細杖、ES衣服&手套、鞋子全部
-Show
+Show # 81 Expert Dualstring Bow
     ItemLevel >= 81
-    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Omen Sceptre" "Rattling Sceptre" "Expert Crescent Quarterstaff" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Expert Altar Robe" "Expert Keth Raiment" "Expert Intricate Gloves" "Expert Waxed Jacket"
+    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Omen Sceptre" "Rattling Sceptre" "Expert Crescent Quarterstaff" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Expert Altar Robe" "Expert Keth Raiment" "Expert Intricate Gloves" "Expert Waxed Jacket"
         SetFontSize 40
-        SetTextColor   199 128 45   # 金茶
-        SetBorderColor 199 128 45   # 金茶
-        SetBackgroundColor 233 233 233 233      # OFFWHITE
+        SetTextColor 239 187 36 255
+        SetBorderColor 239 187 36 255
+        SetBackgroundColor 0 0 0 255
             PlayEffect Orange
             MinimapIcon 0 Red Diamond
 
@@ -332,37 +306,37 @@ Show
 #--------------------------
 # Breach Rings
 #--------------------------
-
-Show
+Show # Rare Breach Ring
     Class "Rings"
     Rarity Rare
     BaseType  "Breach Ring"
-        SetTextColor 193 167 255        # 淺粉
-        SetBorderColor 193 167 255      # 鐵紺（深紫）
-        SetBackgroundColor 0 0 0        # 黑色
+        SetTextColor 193 167 255 255
+        SetBorderColor 193 167 255 255
+        SetBackgroundColor 0 0 0 255
+    SetFontSize 40
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+Show # Breach Ring
+    Class "Rings"
+    Rarity Normal Magic
+    BaseType  "Breach Ring"
+        SetTextColor 193 167 255 255
+        SetBorderColor 193 167 255 255
+        SetBackgroundColor 0 0 0 255
     SetFontSize 40
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
 
-Show
-    Class "Rings"
-    Rarity Magic
-    BaseType  "Breach Ring"
-        SetTextColor 223 216 241 220    # 粉白
-        SetBorderColor 155 144 194 220  # 楝（藍莓色）
-        SetBackgroundColor 20 20 38 220 # 淺黑色
-    SetFontSize 40
-
 #--------------------------
 # 戒指 護身符 腰帶 ring belt amulet
 #--------------------------
-Show
+Show # Rare Jewellry
     Class "Rings" "Amulets" "Belt"
     Rarity Rare
     SetFontSize 40
-        SetTextColor 193 167 255        # 淺粉
-        SetBorderColor 193 167 255      # 鐵紺（深紫）
-        SetBackgroundColor 0 0 0        # 黑色
+        SetTextColor 193 167 255 255
+        SetBorderColor 193 167 255 255
+        SetBackgroundColor 0 0 0 255
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     
@@ -376,15 +350,15 @@ Show
 # 細杖 Warstaff！！！
 #--------------------------
 # 高物理點傷
-Show
+Show # Expert Gothic Quaterstaff
 Class "Quarterstaves"
 Rarity Rare
 # "Expert Barrier Quarterstaff" "Expert Crackling Quarterstaff"
 BaseType "Expert Crescent Quarterstaff" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff"
-        SetTextColor   227 176 21       # 類似鬱金
-        SetBorderColor 227 176 21       # 類似鬱金
-        SetBackgroundColor 0 0 0        # 黑色
         SetFontSize 40
+        SetTextColor 207 187 35 230
+        SetBorderColor 0 0 0 0
+        SetBackgroundColor 0 0 0 255
     PlayEffect Grey
     MinimapIcon 1 Grey Diamond
 
@@ -392,65 +366,69 @@ BaseType "Expert Crescent Quarterstaff" "Expert Long Quarterstaff" "Expert Slici
 #--------------------------
 # 十字弓 Crossbows!!!
 #--------------------------
-Show
+Show # Expert Crossbow
 Class "Crossbows"
 Rarity Rare
-BaseType "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Sturdy Crossbow" "Expert Forlorn Crossbow" "Expert Varnished Crossbow" "Expert Tense Crossbow"
-        SetTextColor   227 176 21       # 類似鬱金
-        SetBorderColor 227 176 21       # 類似鬱金
-        SetBackgroundColor 0 0 0        # 黑色
+# Dyad
+BaseType "Expert Bombard Crossbow" "Expert Sturdy Crossbow" "Expert Forlorn Crossbow" "Expert Varnished Crossbow" "Expert Tense Crossbow"
         SetFontSize 40
+        SetTextColor 207 187 35 255
+        SetBorderColor 0 0 0 0
+        SetBackgroundColor 0 0 0 255
     PlayEffect Grey
     MinimapIcon 1 Grey Diamond
 
 #--------------------------
 # 弓 Bows!!!
 #--------------------------
-Show
+Show # Expert Dualstring Bow
 Class "Bows"
 Rarity Rare
 BaseType "Expert Dualstring Bow" "Expert Zealot Bow" "Expert Warden Bow"
-        SetTextColor   227 176 21       # 類似鬱金
-        SetBorderColor 227 176 21       # 類似鬱金
-        SetBackgroundColor 0 0 0        # 黑色
         SetFontSize 40
+        SetTextColor 207 187 35 255
+        SetBorderColor 0 0 0 0
+        SetBackgroundColor 0 0 0 255
     PlayEffect Grey
     MinimapIcon 1 Grey Diamond
 
 #--------------------------
 # Wands 法杖 +閃電寶石等級!!!!
 #--------------------------
-# +4閃電 > 施法速度 > mana > 爆率、點傷、增傷
-Show
+# +4閃電 > 施法速度 > mana > 爆率、點傷、增傷率、點傷、增傷
+Show # Siphoning Wand
     Class "Wands"
     Rarity Rare
     BaseType "Siphoning Wand" "Attuned Wand"
-        SetTextColor   227 176 21       # 類似鬱金
-        SetBorderColor 227 176 21       # 類似鬱金
-        SetBackgroundColor 0 0 0        # 黑色
         SetFontSize 40
+        SetTextColor 207 187 35 255
+        SetBorderColor 0 0 0 0
+        SetBackgroundColor 0 0 0 255
     PlayEffect Grey
     MinimapIcon 1 Grey Diamond
 
 #--------------------------
 # Staff
 #--------------------------
-Show
+Show # Staves
 Class "Staves"
 Rarity Rare
 BaseType "Chiming Staff"
-        SetTextColor 239 187 36         # 鬱金
         SetFontSize 35
+        SetTextColor   180 165 130      # 利休白茶
+        SetBackgroundColor 20 20 20 230
 
 #--------------------------
 # 權杖 Sceptres
 #--------------------------
+    SetBorderColor 0 0 0 255
 Show
 Class "Sceptres"
 Rarity Rare
 BaseType "Omen Sceptre" "Rattling Sceptre"
-        SetTextColor 239 187 36         # 鬱金
         SetFontSize 35
+        SetTextColor   180 165 130      # 利休白茶
+        SetBackgroundColor 20 20 20 230
 
 #--------------------------
 # 法器 Focus
@@ -459,8 +437,9 @@ Show
 Class "Focus"
 Rarity Rare
 BaseType "Expert Plumed Focus"
-        SetTextColor 239 187 36         # 鬱金
         SetFontSize 35
+        SetTextColor   180 165 130      # 利休白茶
+        SetBackgroundColor 20 20 20 230
 
 #--------------------------
 # 箭袋 Quiver
@@ -469,8 +448,9 @@ Show
 Class "Quivers"
 Rarity Rare
 BaseType "Primed Quiver" "Penetrating Quiver"
-        SetTextColor 239 187 36         # 鬱金
         SetFontSize 35
+        SetTextColor   180 165 130      # 利休白茶
+        SetBackgroundColor 20 20 20 230
 
 #--------------------------
 # Titan Mace 泰坦圖騰雙手錘
@@ -479,8 +459,9 @@ Show
     Class "Two Hand Maces"
     Rarity Rare
     BaseType "Advanced Cultist Greathammer" "Advanced Oak Greathammer" "Expert Cultist Greathammer" "Expert Oak Greathammer"
-        SetTextColor 239 187 36         # 鬱金
         SetFontSize 35
+        SetTextColor   180 165 130      # 利休白茶
+        SetBackgroundColor 20 20 20 230
 
 
 #========================
@@ -489,13 +470,13 @@ Show
 #-------------
 ## T1 ES、閃避防裝！！！
 #-------------
-Show
+Show # Expert Feathered Sandals
     Rarity Rare
         BaseType "Expert Feathered Sandals" "Expert Lizardscale Boots" "Expert Altar Robe" "Expert Keth Raiment" "Expert Studded Vest" "Expert Serpentscale Coat"  "Expert Waxed Jacket" "Expert Intricate Gloves" "Expert Feathered Tiara" "Expert Hunter Hood" "Expert Swathed Cap" "Expert Chain Tiara" 
-        SetTextColor   227 176 21       # 類似鬱金
-        SetBorderColor 0 0 0
-        SetBackgroundColor 0 0 0        # 黑色
-    SetFontSize 40
+        SetFontSize 40
+        SetTextColor 207 187 35 255
+        SetBorderColor 0 0 0 0
+        SetBackgroundColor 0 0 0 255
     PlayEffect Grey
     MinimapIcon 1 Grey Diamond
 
@@ -508,9 +489,11 @@ Hide
     Rarity Rare
     # 取消顯示 "Expert Steel Plate" "Expert Vaal Cuirass" "Expert Rogue Armour" "Expert Cloaked Mail" "Expert Sacrificial Mantle"
     # ES 薩滿 閃避 ES+閃避
-    BaseType  "Expert Hexer's Robe" "Expert Keth Raiment" "Expert Altar Robe" "Expert Shaman Mantle" "Expert Studded Vest" "Expert Serpentscale Coat"  "Expert Scalper's Jacket" "Expert Wayfarer Jacket"  "Expert Waxed Jacket"  
-        SetTextColor 239 187 36         # 鬱金
+    BaseType  "Expert Hexer's Robe" "Expert Keth Raiment" "Expert Altar Robe" "Expert Shaman Mantle" "Expert Scalper's Jacket" "Expert Wayfarer Jacket" 
         SetFontSize 35
+        SetTextColor   173 161 66       # 青朽葉
+        SetBorderColor 0 0 0 0
+        SetBackgroundColor 0 0 0        # 黑色
 
 # 前綴：ES、閃避
 # 後綴：稀有度、抗性、屬性
@@ -519,24 +502,28 @@ Hide
     Rarity Rare
     # "Expert Spired Greathelm" "Expert Elite Greathelm" "Expert Shielded Helm" 
     BaseType "Expert Feathered Tiara" "Expert Chain Tiara" "Expert Hunter Hood" "Expert Swathed Cap" "Expert Tribal Mask" "Expert Veiled Mask" 
-        SetTextColor 239 187 36         # 鬱金
         SetFontSize 35
-
+        SetTextColor   173 161 66       # 青朽葉
+        SetBorderColor 0 0 0 0
+        SetBackgroundColor 0 0 0        # 黑色
 Hide
     Class "Gloves"
     Rarity Rare
     BaseType "Expert Intricate Gloves" "Expert Jewelled Gloves" "Expert Sombre Gloves" "Expert Moulded Mitts" "Expert Bolstered Mitts" "Expert Riveted Mitts"
-        SetTextColor 239 187 36         # 鬱金
         SetFontSize 35
-
+        SetTextColor   173 161 66       # 青朽葉
+        SetBorderColor 0 0 0 0
+        SetBackgroundColor 0 0 0        # 黑色
 Hide
     Class "Boots"
     Rarity Rare
     # "Expert Trimmed Greaves" "Expert Stone Greaves" "Expert Pelt Leggings"
     # 只高亮3種ES，2種閃避，2種類閃避ES複合
     BaseType "Expert Feathered Sandals" "Expert Silk Slippers" "Expert Wrapped Sandals" "Expert Lizardscale Boots" "Expert Steeltoe Boots" "Expert Hunting Shoes" "Expert Threaded Shoes"         
-        SetTextColor 239 187 36         # 鬱金
         SetFontSize 35
+        SetTextColor   173 161 66       # 青朽葉
+        SetBorderColor 0 0 0 0
+        SetBackgroundColor 0 0 0        # 黑色
 
 
 
@@ -545,15 +532,26 @@ Hide
 ## 650 藍白好基底 Magic lan
 #========================
 # 十字弓、雙弦弓、法杖
-Hide
-Rarity Normal Magic
-BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand"
-        SetTextColor 165 222 228 200        # 綠色
-        SetBackgroundColor 12 12 12 220     # 黑色
+Hide # Expert Dualstring Bow
+Rarity Magic
+    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Expert Crescent Quarterstaff" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff"
+        SetFontSize 35 
+        SetBackgroundColor 19 19 19 250
+        SetTextColor 255 255 255 255
+        SetBorderColor 0 0 0 0
+
+# 十字弓、雙弦弓、法杖
+Hide # Expert Dualstring Bow
+Rarity Normal
+    BaseType "Expert Dualstring Bow" "Expert Bombard Crossbow" "Expert Forlorn Crossbow" "Siphoning Wand" "Attuned Wand" "Expert Crescent Quarterstaff" "Expert Long Quarterstaff" "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff"
+        SetFontSize 35 
+        SetBackgroundColor 38 38 38 230
+        SetTextColor 233 233 233 210
+        SetBorderColor 0 0 0 0
 
 
 #========================
-## 其他金裝備 黃 huang
+## 其他專家金裝備 黃 huang
 #========================
 
 #只顯示專家基底
@@ -561,16 +559,15 @@ Hide
     Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "focus"
     Rarity Rare
     BaseType "Expert"
-    SetTextColor 180 165 130        # 利休白茶
-    SetBackgroundColor 0 0 0 220    # 淺黑
-    SetFontSize 35
-
+        SetTextColor   180 165 130      # 利休白茶
+        SetBackgroundColor 0 0 0 220    # 淺黑
+        SetFontSize 35
 Hide
     Class "Quiver" "Crossbow" "Wand" "Bow"
     Rarity Rare
-    SetTextColor 180 165 130        # 利休白茶
-    SetBackgroundColor 0 0 0 220    # 淺黑
-    SetFontSize 35
+        SetTextColor   180 165 130      # 利休白茶
+        SetBackgroundColor 0 0 0 220    # 淺黑
+        SetFontSize 35
 
 
 #============================================
@@ -578,46 +575,48 @@ Hide
 #============================================
 
 # Special A Tier - League specific socketables and jewels
-Show 
+Show # Soul Core
     BaseType "Soul Core" "Timeless"
-        SetTextColor 255 255 255
+        SetTextColor 255 255 255 255
         SetBorderColor 255 255 255 0
-        SetBackgroundColor 168 73 122   # 梅紫
+        SetBackgroundColor 168 73 122 255
         MinimapIcon 2 Purple Cross
         SetFontSize 40
 
 # Special A Tier - Sanctum Relics
-Show 
+Show # Relic
     Class "Relic"
-        SetTextColor 0 137 108          # 青竹（星巴克綠）
+        SetTextColor 0 137 108 255
         SetBorderColor 0 137 108 90
         SetFontSize 40
         MinimapIcon 2 Cyan UpsideDownHouse
         PlayEffect Cyan
+        SetBackgroundColor 0 0 0 255
 
 #---------------------
 ## 高亮顯示珠寶！！！
 #---------------------
 # Special A Tier - Rare Jewels
-Show
+    
+Show # Rare Jewel
     Class "Jewel"
     Rarity Rare
-        SetTextColor 255 255 255         
+        SetTextColor 255 255 255 255
         SetBorderColor 0 0 0 90
-        SetBackgroundColor 190 194 63   # 鶸（金絲雀）
+        SetBackgroundColor 207 194 54 255
         SetFontSize 40
         MinimapIcon 2 Cyan Triangle
         PlayEffect Orange
 
 # Special B Tier - Any Jewels
-Show
+Show # Jewel
     Class "Jewel"
-    Rarity Magic Normal
-        SetTextColor 0 0 0        
+    Rarity Magic
+        SetTextColor 0 0 0 255
         SetBorderColor 0 0 0 90
-        SetBackgroundColor 51 166 184   # 淺蔥（藍）
+        SetBackgroundColor 51 166 184 255
         SetFontSize 40
-        PlayEffect Cyan 
+        PlayEffect Cyan
 
 
 #==================
@@ -627,119 +626,106 @@ Show
 #------------------
 ## Divine Orb
 #------------------
-Show
+Show # Divine Orb
     Class "Currency"
     BaseType "Mirror" "Divine" "Perfect Jeweller's Orb" "Greater Jeweller's Orb" "Orb of Chance"
     SetFontSize 45
-    SetTextColor 203 27 69          # 紅
-    SetBorderColor 203 27 69        # 紅
-    SetBackgroundColor 255 255 255 
+    SetTextColor 203 27 69 255
+    SetBorderColor 203 27 69 255
+    SetBackgroundColor 255 255 255 255
     PlayAlertSound 1 300
     PlayEffect Red
     MinimapIcon 0 Red Star
 
 #---------------
-## Exalted Orb
+## Currency Tier A: Gemcutter, Annullment，Exalted Orb
 #---------------
-Show
+Show # Exalted Orb
     Class "Currency"
-    BaseType  "Exalted Orb" 
+    BaseType  "Exalted Orb" "Gemcutter's Prism" "Orb of Annulment"
         SetFontSize 45
-        SetTextColor 255 255 255
-        SetBorderColor 255 255 255
-        SetBackgroundColor 247 92 47    # 紅緋（亮橘）
-    PlayAlertSound 10 300
+        SetTextColor 255 255 255 255
+        SetBorderColor 255 255 255 255
+        SetBackgroundColor 247 92 47 255
+    PlayAlertSound 9 300
     PlayEffect Red
     MinimapIcon 0 Red Circle
 
 
 #-----------------------------------------
-## Currency Tier A: Gemcutter, Annullment
+## Currency Tier B: Vaal, Chaos, Exalt, Exotic 
+## 差不多 1ex
 #-----------------------------------------
-Show
-    Class "Currency"
-    BaseType "Gemcutter's Prism" "Orb of Annulment"
-    SetTextColor 0 0 0
-    SetBorderColor 0 0 0
-    SetBackgroundColor 191 64 75        # 真朱（赤紅）
+Show # Vaal Orb
+    Class "Currency"    
+    BaseType "Vaal Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Exotic" "Exalted Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy"    
+    SetTextColor 0 0 0 255
+    SetBorderColor 0 0 0 255
+    SetBackgroundColor 191 64 75 255
         PlayAlertSound 2 300
         PlayEffect White
         MinimapIcon 1 Purple Circle
         SetFontSize 40
 
 #-----------------------------------------------
-## Currency Tier B: Vaal, Chaos, Exalt, Exotic 
-## 差不多 1ex
+## Currency Tier C: 護甲片 
+## 0.5Ex⬆️
 #-----------------------------------------------
-Show
+Show # Armourer's Scrap
     Class "Currency"
-    BaseType "Vaal Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Exotic" "Exalted Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy"
-    SetTextColor 0 0 0           
+    BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Chance Shard" "Regal Orb"
+    SetTextColor 0 0 0 255
     SetBorderColor 12 12 12 233
-    SetBackgroundColor 191 103 102 233  # 長春（朱紅）
+    SetBackgroundColor 191 103 102 233
         PlayAlertSound 2 260
         PlayEffect White
         MinimapIcon 1 Pink Circle
         SetFontSize 40
 
-#------------------------
-## Currency Tier C: 護甲片 
-## 0.5Ex⬆️
-#------------------------
-Show
-    Class "Currency"
-    BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Chance Shard" "Regal Orb"
-        SetTextColor 30 26 16
-        SetBorderColor 0 0 0
-        SetBackgroundColor 220 159 180 220  # 撫子（淺粉）
-        MinimapIcon 2 Grey Circle
-        SetFontSize 40
-
 #------------------
 ## 譫妄碎片、裂痕碎片
 #------------------
-Show
+Show # Simulacrum Splinter
     Class "Currency"
     BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact" 
-        SetTextColor 255 255 255
+        SetTextColor 255 255 255 255
         SetBorderColor 255 255 255 170
-        SetBackgroundColor 168 73 122   # 梅紫
+        SetBackgroundColor 168 73 122 255
         MinimapIcon 2 Purple Cross
         SetFontSize 40
 
 #----------------
 ## 高價催化劑
 #----------------
-Show
+Show # T1 Catalyst
     Class "Currency"
     BaseType "Esh's Catalyst" "Tul's Catalyst" "Neural Catalyst" "Reaver Catalyst" "Chayula's Catalyst" "Skittering Catalyst"
-    SetTextColor 255 255 255
+    SetTextColor 255 255 255 255
         SetBorderColor 255 255 255 0
-        SetBackgroundColor 168 73 122   # 梅紫
+        SetBackgroundColor 168 73 122 255
         MinimapIcon 2 Purple Cross
         SetFontSize 40
-
-Show
+Show # 5x Catalysts
     Class "Currency"
     BaseType  "Catalyst" 
     StackSize >= 5
-    SetTextColor 33 30 85           # 紺桔梗（深紫）
-    SetBackgroundColor 180 129 187  # 紅藤（藍莓起司）
+    SetTextColor 33 30 85 255
+    SetBackgroundColor 180 129 187 255
         PlayAlertSound 2 300
         PlayEffect White
         MinimapIcon 1 Pink Circle
         SetFontSize 40
-
-Show
+    SetBorderColor 0 0 0 255
+Show # Essence
     Class "Currency"
     BaseType "Distilled" "Essence of" "Omen of"
-    SetTextColor 33 30 85           # 紺桔梗（深紫）
-    SetBackgroundColor 180 129 187  # 紅藤（藍莓起司）
+    SetTextColor 33 30 85 255
+    SetBackgroundColor 180 129 187 255
         PlayAlertSound 2 300
         PlayEffect White
         MinimapIcon 1 Pink Circle
         SetFontSize 40
-
+    SetBorderColor 0 0 0 255
 Hide
     Class "Currency"
     BaseType "Catalyst"
@@ -750,34 +736,37 @@ Hide
 #------------------
 ## 隱藏捲軸、蛻變石
 #------------------
-Hide
+Hide # Wisdom
     Class "Currency"
     BaseType "Wisdom" "Shard" "Aug" "Transmut" "Regal Shard"
 
 
 ## Unknown currency
-Show
+    SetTextColor 245 205 255 255
+    SetBackgroundColor 255 255 255 0
+    SetBorderColor 245 205 255 255
+Show # Unknown Currency
     Class "Currency"
-    SetTextColor 255 207 132
-    SetBorderColor 255 207 132
-    SetBackgroundColor 76 51 12
+    SetTextColor 255 207 132 255
+    SetBorderColor 255 207 132 255
+    SetBackgroundColor 76 51 12 255
         PlayAlertSound 2 300
         PlayEffect Pink
         MinimapIcon 1 White Circle
 
 
 #===========================
-### 300 Fragments 碎片
+### 3001 Fragments 碎片
 #===========================
 
 #-------------------------
 ### Expensive Fragments
 #-------------------------
-Show
+Show # Simulacrum
     BaseType "Simulacrum" "Breachstone" " Fragment" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Expedition Logbook"
-    SetTextColor 15 127 213         # 天空藍
-    SetBorderColor 15 127 213       # 天空藍
-    SetBackgroundColor 255 255 255  # 白色
+    SetTextColor 15 127 213 255
+    SetBorderColor 15 127 213 255
+    SetBackgroundColor 255 255 255 255
         PlayAlertSound 6 300
         PlayEffect Red
         MinimapIcon 0 Red Star
@@ -786,21 +775,14 @@ Show
 #-------------------------
 ### Normal Fragments 
 #-------------------------
-Show
-    BaseType "Tablet" 
-    SetTextColor 255 85 85          # 深橘
-    SetBorderColor 255 85 85        # 深橘
-    SetBackgroundColor 40 0 30      # 紫紅
+Show # Tablet
+    BaseType " Tablet" "Barya" "Ultimatum" 
+    SetTextColor 255 85 85 255
+    SetBorderColor 255 85 85 255
+    SetBackgroundColor 40 0 30 255
         PlayAlertSound 5 300
         PlayEffect Yellow
         MinimapIcon 1 Yellow UpsideDownHouse
-        SetFontSize 40
-
-Hide
-    BaseType  "Barya" "Ultimatum" 
-    SetTextColor 255 85 85          # 深橘
-    SetBorderColor 255 85 85        # 深橘
-    SetBackgroundColor 40 0 30      # 紫紅
         SetFontSize 40
 
 #-------------------------
@@ -808,101 +790,138 @@ Hide
 #-------------------------
 
 # 塗油地圖
-Show
+Show # Delirious Waystone
     BaseType "Waystone" 
     Rarity <= Rare
     AnyEnchantment True
     WaystoneTier >= 11
-        SetTextColor 152 109 178        # 半（紫色）       
-        SetBorderColor 152 109 178  
-        SetBackgroundColor 240 240 240  # WHITE
+        SetTextColor 152 109 178 255
+        SetBorderColor 152 109 178 255
+        SetBackgroundColor 240 240 240 255
     PlayAlertSound 4 300
     PlayEffect Yellow
     MinimapIcon 1 Purple Square
     SetFontSize 40
-
-Show
+Show # T15 Waystone
     BaseType "Waystone" 
     Rarity <= Rare
     WaystoneTier >= 15
-        SetTextColor 0 0 0            
-        SetBorderColor 56 0 12
-        SetBackgroundColor 226 226 226  # OFFWHITE
+        SetTextColor 0 0 0 255
+        SetBorderColor 56 0 12 255
+        SetBackgroundColor 226 226 226 255
     PlayAlertSound 4 300
     PlayEffect Yellow
     MinimapIcon 1 Red Square
     SetFontSize 40
-
-Hide
+Show # T13 Waystone
     BaseType "Waystone" 
     Rarity <= Rare
-    WaystoneTier >= 14
-        SetBorderColor 250 250 250 150 
+    WaystoneTier >= 13
+        SetBorderColor 250 250 250 150
         SetTextColor 226 226 226 230
         SetBackgroundColor 0 0 0 230
     SetFontSize 40
-
-Hide
+Hide # T11 Waystone
     BaseType "Waystone" 
     Rarity <= Rare
     WaystoneTier >= 11
-        SetBorderColor 0 0 0 0 
+        SetBorderColor 0 0 0 0
+        SetTextColor 200 200 200 190
+        SetBackgroundColor 0 0 0 210
+    SetFontSize 40
+Hide # Waystone
+    BaseType "Waystone"
+    WaystoneTier <= 10
+    AreaLevel >= 65
+        SetBorderColor 0 0 0 0
         SetTextColor 200 200 200 170
         SetBackgroundColor 0 0 0 200
     SetFontSize 40
-
-
-Hide
-    BaseType "Waystone"
-    WaystoneTier <= 10
 
 
 #====================
 ## 000 其他
 #====================
 
-#--------------
-## 不受歡迎腰帶、戒指
-#--------------
-Hide 
-    Rarity Magic Normal
-    BaseType "Linen Belt" "Wide Belt" "Heavy Belt" "Plate Belt" "Rawhide Belt" "Mail Belt" "Emerald Ring" "Pearl Ring"
 
 #----------------
-## 隱藏：藍白飾品
+## 藍白飾品
 #----------------
-Hide
+
+Hide # Jewellry
     Class "Rings" "Amulets" "Belt"
     Rarity Magic Normal
-    SetFontSize 35
-    SetTextColor 120 194 196 230    # 白群 （湖水綠）
-    SetBorderColor 0 0 0 200        # 黑
+        SetFontSize 35
+        SetTextColor 155 190 202 230
+        SetBorderColor 0 0 0 200
+        SetBackgroundColor 0 0 0 255
 
+#-----------------------------------
+## Salvagable Items
+## 隱藏：插槽物品、品質裝備（換護甲片）
+#-----------------------------------
+
+# 讓插槽/護甲品質裝備出現
+    
+Hide # Socketed Item
+    Class "Rings" "Amulets" "Belt"
+    Rarity Magic Normal
+        SetFontSize 35
+        SetTextColor 155 190 202 230
+        SetBorderColor 0 0 0 200
+        SetBackgroundColor 0 0 0 255
+
+
+#--------------------------------------------
+## 83 藥水
 #-------------------------------------------
-## 顯示：83+藥水
-#-------------------------------------------
-Show
+    
+Show # 83 Flask
     ItemLevel >= 83
     BaseType "Ultimate Mana" "Ultimate Life"
         SetFontSize 40
-        SetTextColor 81 168 221 230 # 群青 
-        SetBackgroundColor 255 255 255 # 白
-        SetBorderColor 0 0 0 200 # 黑
+        SetTextColor 81 168 221 230
+        SetBackgroundColor 255 255 255 255
+        SetBorderColor 0 0 0 200
+
+#-------------------------------------------
+## 顯示：81+藥水
+#-------------------------------------------
+Hide # 81 Flask
+    ItemLevel >= 81
+    BaseType "Ultimate Mana" "Ultimate Life"
+        SetFontSize 35 
+        SetTextColor 81 168 221 230
+        SetBorderColor 0 0 0 200
+        SetBackgroundColor 0 0 0 255
 
 #-------------------------------------------
 ## 隱藏：藍白的大部分基底（除了好基底與飾品）
 #-------------------------------------------
-Hide
-    Rarity <= Magic
-    Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "focus" 
+    
+Hide # Normal Item
     AreaLevel >= 65
+    Rarity Normal
+    Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "focus" 
+        SetFontSize 35 
+        SetBackgroundColor 38 38 38 230
+        SetTextColor 233 233 233 210
+        SetBorderColor 0 0 0 0
+Hide # Magic Item
+    AreaLevel >= 65
+    Rarity  Magic
+    Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "focus" 
+        SetFontSize 35 
+        SetTextColor 81 168 221 230
+        SetBorderColor 0 0 0 200
 
-#----------------------------------
-# 想要鑒定所有金裝的人，請將這一段刪除
-#----------------------------------
-Hide
+#--------------------------------------
+## 隱藏：其他普通的金裝
+#--------------------------------------
+    SetBackgroundColor 0 0 0 255
+Hide # Rare Item
     Rarity Rare
-    SetTextColor 190 194 63 170     # 鶸（金絲雀）
+    AreaLevel >= 65
+    SetTextColor 190 194 63 170
     SetBackgroundColor 0 0 0 170
 
-# "物品稀有度" | "稀有怪物"
