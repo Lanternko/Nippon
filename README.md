@@ -2,6 +2,9 @@
 Uses traditional Japanese colors to create a chill, zen-like vibe for mapping. 
 Focusing on clarity and minimal distraction.
 
+Follow My Filer on POE official website for auto-updating!
+https://www.pathofexile.com/account/view-profile/kojiek7-3653/item-filters
+
 ## Normal version
 Ideal for beginners(campaign or low tier maps), Nippon Normal offers a straightforward and detailed information of valued items.
 
